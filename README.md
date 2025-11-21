@@ -13,63 +13,102 @@ This repository hosts the canonical specification, example artifacts, and govern
 
 The standard defines:
 
-- **AI Discovery Rank (ADR)** — a composite score that measures how reliably a business is surfaced and referenced by AI systems for relevant, real-world queries.
-- **Visibility Evidence Rating (VER)** — an assessment of the strength, recency, and distribution of proof signals (reviews, citations, profiles, content, etc.).
-- **Competitive Context** — how a given business compares to others in its region/category from an AI visibility perspective.
-- **Fix-Levers** — a practical set of levers operators can pull to move from “AI-invisible” to consistently discoverable in under 90 days.
-- **Standardized Artifacts** — JSON-based artifacts that describe scans, ADR outputs, and implemented fixes in a machine-readable way.
+- **AI Discovery Rank (ADR)** — how reliably a business is surfaced by AI.
+- **Visibility Evidence Rating (VER)** — strength, recency, and trust of proof signals.
+- **Competitive Context** — how a business compares in its region/category.
+- **Fix-Levers** — actionable interventions that move a business from invisible to discoverable.
+- **Standardized Artifacts (DOA)** — JSON-based, interoperable audit outputs.
 
-The standard is designed to be:
+The standard is:
 
-- **Open** — no proprietary lock-in, no paywall to read or implement.
-- **Practical** — built for working operators, agencies, and SMBs.
-- **Versioned** — explicit semantic versioning (v1.2, v1.3, etc.).
-- **Implementation-neutral** — tools, agencies, and platforms can adopt it without adopting any specific vendor.
+- **Open**
+- **Practical**
+- **Versioned**
+- **Implementation-neutral**
 
 ---
 
 ## Who This Is For
 
-The DiscoverabilityOps Standard is purpose-built for:
+Built for:
 
-- **Service businesses** (HVAC, roofing, plumbing, real estate, trades, consulting)
-- **Local and regional operators**
-- **Agencies** that want a repeatable AI visibility framework
-- **Product teams** building tools that grade or improve AI visibility
+- Service businesses  
+- Local/regional operators  
+- Agencies  
+- Product teams building AI visibility tools  
 
-It is **not** optimized for:
-
-- Pure enterprise governance/compliance programs
-- Closed internal risk frameworks
-- Black-box “proprietary” AI visibility scores
-
-If you want a governance-heavy, enterprise-only framework, see AIVO Standard.  
-If you want a working, field-tested playbook for real businesses, you’re in the right place.
+Not optimized for enterprise-only compliance frameworks.
 
 ---
 
 ## Repository Structure
 
-```text
 discoverabilityops-standard/
 │
-├── README.md                # This file
-├── VERSION                  # Current spec version (e.g., v1.2)
-├── CHANGELOG.md             # Version history
-├── LICENSE                  # MIT License
+├── README.md
+├── VERSION
+├── CHANGELOG.md
+├── LICENSE
 │
 ├── spec/
-│   └── standard.md          # Markdown specification (core of the standard)
+│ └── standard.md
 │
 ├── docs/
-│   ├── DiscoverabilityOps_Standard_v1.2.pdf   # PDF version of the spec
-│   └── appendices.md                          # Supplemental examples / notes
+│ ├── DiscoverabilityOps_Standard_v1.2.pdf
+│ └── appendices.md
 │
 ├── examples/
-│   ├── example-artifact.json           # Sample DiscoverabilityOps Artifact
-│   └── example-adr-calculation.md      # ADR calculation walkthrough
+│ ├── example-artifact.json
+│ └── example-adr-calculation.md
 │
 └── governance/
-    ├── CONTRIBUTING.md
-    ├── GOVERNANCE.md
-    └── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── GOVERNANCE.md
+└── CODE_OF_CONDUCT.md
+
+yaml
+Copy code
+
+---
+
+## Versioning
+
+This standard uses semantic versioning.
+
+Current version:
+
+v1.2
+
+pgsql
+Copy code
+
+---
+
+## DiscoverabilityOps Artifact (DOA)
+
+```json
+{
+  "version": "1.2",
+  "entity": { "name": "Example HVAC Co.", "region": "Dallas, TX" },
+  "metrics": { "adr": 78, "ver": 0.71 },
+  "signals": {
+    "profiles": ["GBP", "Yelp"],
+    "content_sources": ["Website", "YouTube"],
+    "citation_examples": ["chatgpt:gpt-4o", "perplexity:online"]
+  },
+  "fix_levers": ["entity_clarity", "review_distribution"],
+  "scan_context": {
+    "stage": "stage_0_field_scan",
+    "query_set_version": "2025-11-default"
+  }
+}
+License
+Published under MIT.
+See LICENSE.
+
+How to Cite
+“DiscoverabilityOps Standard v1.2”
+https://github.com/discoverabilityops/discoverabilityops-standard
+
+Contributing
+See governance/CONTRIBUTING.md.
