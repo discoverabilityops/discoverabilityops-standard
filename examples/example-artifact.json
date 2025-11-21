@@ -1,0 +1,28 @@
+{
+  "version": "1.2",
+  "entity": {
+    "name": "Example HVAC Co.",
+    "category": "HVAC",
+    "region": "Dallas, TX"
+  },
+  "metrics": {
+    "adr": 78,
+    "ver": 0.71
+  },
+  "signals": {
+    "profiles": ["Google Business Profile", "Yelp"],
+    "content_sources": ["Website", "YouTube"],
+    "citation_examples": [
+      "chatgpt:gpt-4o",
+      "perplexity:online"
+    ]
+  },
+  "fix_levers": [
+    "entity_clarity",
+    "topic_cluster_expansion"
+  ],
+  "scan_context": {
+    "stage": "stage_0_field_scan",
+    "scan_date": "2025-11-20"
+  }
+}
