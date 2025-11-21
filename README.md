@@ -1,3 +1,7 @@
+![version](https://img.shields.io/github/v/release/discoverabilityops/discoverabilityops-standard)
+![license](https://img.shields.io/github/license/discoverabilityops/discoverabilityops-standard)
+![stars](https://img.shields.io/github/stars/discoverabilityops/discoverabilityops-standard)
+
 # DiscoverabilityOps Standard
 
 DiscoverabilityOps™ is an open technical standard for measuring and improving how service businesses are detected, interpreted, and recommended inside AI-driven answer engines (ChatGPT, Gemini, Perplexity, Copilot, etc.).
