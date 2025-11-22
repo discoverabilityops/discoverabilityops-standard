@@ -1,28 +1,66 @@
 {
-  "version": "1.2",
+  "version": "1.0",
   "entity": {
-    "name": "Example HVAC Co.",
-    "category": "HVAC",
-    "region": "Dallas, TX"
+    "name": "Sample Business",
+    "category": "Plumber",
+    "region": "Bartow County, GA",
+    "noun_pattern": ["water heater", "emergency", "drain"],
+    "identity_notes": "Entity identity is stable and consistent."
   },
   "metrics": {
-    "adr": 78,
-    "ver": 0.71
+    "adr_v4": 83,
+    "ver_v4": 0.74,
+    "velocity_multiplier": 1.15,
+    "contradiction_penalty": -8
   },
   "signals": {
-    "profiles": ["Google Business Profile", "Yelp"],
-    "content_sources": ["Website", "YouTube"],
-    "citation_examples": [
-      "chatgpt:gpt-4o",
-      "perplexity:online"
+    "profiles": [
+      "https://google.com/...",
+      "https://yelp.com/..."
+    ],
+    "citations": [
+      "https://localchamber.com/..."
+    ],
+    "content_sources": [
+      "https://samplebusiness.com/blog/water-heater-tips"
+    ],
+    "reviews": {
+      "count": 124,
+      "distribution": "Strong across multiple platforms",
+      "themes": ["water heater", "fast service", "drain clearing"]
+    }
+  },
+  "contradictions": [
+    "Old directory listing shows incorrect category (HVAC)."
+  ],
+  "category_clusters": [
+    "Water Heater",
+    "Emergency Service",
+    "Drain Clearing"
+  ],
+  "competitors": [
+    {
+      "name": "Other Plumbing Co",
+      "adr_v4": 76
+    }
+  ],
+  "recommendations": {
+    "fix_levers": [
+      "Category Tightening",
+      "Review Footprint Strengthening",
+      "Structured Data Alignment"
+    ],
+    "priority_actions": [
+      "Correct old directory listing",
+      "Expand water heater FAQ content"
     ]
   },
-  "fix_levers": [
-    "entity_clarity",
-    "topic_cluster_expansion"
-  ],
   "scan_context": {
-    "stage": "stage_0_field_scan",
-    "scan_date": "2025-11-20"
+    "stage": "1",
+    "date": "2025-01-01",
+    "query_set": [
+      "emergency plumber near me",
+      "water heater repair near me"
+    ]
   }
 }
