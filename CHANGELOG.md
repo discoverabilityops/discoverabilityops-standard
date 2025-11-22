@@ -5,6 +5,7 @@
 Date: 2025-11-22
 
 Added
+DiscoverabilityOps_Standard_v40.pdf
 ADR v4 (5-force model)
 VER v4 (evidence confidence)
 Unified Cognitive Artifact (UCA v1.0)
