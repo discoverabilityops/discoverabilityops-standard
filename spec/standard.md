@@ -1,211 +1,423 @@
-# DiscoverabilityOps Standard (v1.2)
+DiscoverabilityOps Standard (v4.0.0)
 
-This is the canonical Markdown version of the DiscoverabilityOps Standard.  
-The PDF version (“DiscoverabilityOps Standard.pdf”) contains the formatted specification.  
-This Markdown file exists so tools, contributors, and implementers can work with a plain-text version of the standard.
+Plain-English Edition
+The Canonical Specification for AI Visibility & Authority
 
-------------------------------------------------------------
-## 1. Purpose & Scope
-The DiscoverabilityOps Standard defines how to measure, analyze, and improve the visibility of a service business inside AI-driven answer engines such as ChatGPT, Gemini, Perplexity, and Copilot.
+This Markdown file is the official standard.
+PDF formatting is handled separately.
+
+============================================================
+
+1. Introduction
+
+AI systems (ChatGPT, Gemini, Claude, Perplexity, Copilot, etc.) increasingly act as recommendation engines for everyday questions like:
+
+“Who is the best plumber near me?”
+
+“Top realtors in my county?”
+
+“Best accountant for small businesses?”
+
+This standard defines how AI chooses which businesses to recommend, and provides a consistent way to measure, evaluate, and improve that visibility.
+
+DiscoverabilityOps exists for one purpose:
+
+Make sure small businesses are visible, clear, and trusted inside AI models so they get recommended when it matters.
+
+This document explains the entire model in plain English.
+
+============================================================
+
+2. Scope
 
 This standard covers:
-- AI Discovery Rank (ADR)
-- Visibility Evidence Rating (VER)
-- DiscoverabilityOps Artifact (DOA)
-- Ten Fix-Levers for improving visibility
-- A multi-stage workflow for assessment
-- Competitive context interpretation
-- Standardization of audit outputs
 
-This document is implementation-neutral.  
-Any vendor, platform, or agency may adopt it.
+How AI identifies and evaluates local businesses
 
-------------------------------------------------------------
-## 2. Core Definitions
+How DiscoverabilityOps measures visibility and authority
 
-### **AI Discovery Rank (ADR)**
-A composite score (0–100) estimating how reliably an AI model surfaces a business for real-world queries.
+The unified scoring model (ADR v4)
 
-### **Visibility Evidence Rating (VER)**
-A confidence rating (0.00–1.00) describing the strength, consistency, and distribution of supporting signals.
+The evidence confidence model (VER v4)
 
-### **DiscoverabilityOps Artifact (DOA)**
-A JSON-based, machine-readable output summarizing:
-- entity metadata
-- ADR and VER
-- supporting signals
-- competitive insights
-- fix-levers to apply
+Identity, category, and noun-pattern rules
 
-### **Fix-Levers**
-Ten standardized interventions used to strengthen visibility inside AI systems.
+Velocity and decay mechanics
 
-### **Stages (Workflow)**
-A structured process for evaluations:
-- Stage 0: Field Scan
-- Stage 1: Deep Visibility Mapping
-- Stage 2: Fix-Lever Execution
-- Stage 3: Authority Expansion
+Contradiction penalties
 
-------------------------------------------------------------
-## 3. AI Discovery Rank (ADR)
+The unified output schema (UCA v1.0)
 
-ADR answers a simple question:  
-**“How often will an AI model recommend or reference this business for relevant queries?”**
+The 10 Fix-Levers for improving visibility
 
-Components typically include:
-- Detectability of the entity
-- Category clarity
-- Regional relevance
-- Supporting evidence signals
-- Competitive displacement pressure
-- Consistency of appearance across models
+How to evaluate competitors
 
-ADR ranges:
-- **0–39:** Invisible  
-- **40–69:** Partially visible  
-- **70–89:** Strong visibility  
-- **90–100:** Dominant authority  
+How to run consistent audits
 
-Exact formulas may vary, but ADR must remain a 0–100 normalized value aligned with this spec.
+It applies to service businesses of any size, across any region, category, or platform.
 
-------------------------------------------------------------
-## 4. Visibility Evidence Rating (VER)
+============================================================
 
-VER represents **confidence** in the evidence supporting AI visibility.
+3. Terminology (Plain English)
+AI Discovery Rank (ADR v4)
 
-Factors:
-- Strength of citations
-- Recency of updates
-- Review footprint & distribution
-- Content footprint
-- Profile completeness and alignment
-- Third-party trust signals
+A 0–100 score representing how likely an AI model is to recommend a business for real-world queries.
+
+Evidence Confidence Rating (VER v4)
+
+A 0.00–1.00 score representing how reliable the supporting proof is across the web.
+
+Entity Identity
+
+The machine-readable representation of who the business is.
+
+Dominant Noun Pattern
+
+The nouns AI sees most often in reviews, listings, photos, content, and citations — this determines the real category of a business.
+
+Unified Cognitive Artifact (UCA v1.0)
+
+A structured JSON output containing the results of an AI visibility audit.
+
+Fix-Levers
+
+Ten standardized interventions used to improve AI visibility.
+
+Contradiction
+
+Any mismatch between reviews, services, content, listings, or schema.
+
+============================================================
+
+4. How AI Chooses Which Businesses to Recommend
+
+AI doesn’t choose “the best.”
+AI chooses the safest — the business with the clearest identity, cleanest footprint, and strongest supporting signals.
+
+The AI’s primary behavior:
+
+Reduce risk. Recommend only what is proven, clear, and consistent.
+
+This standard defines the factors behind that choice.
+
+============================================================
+
+5. ADR v4 — Authority & Discovery Model
+
+ADR v4 is powered by five forces:
+
+Relevance
+
+Velocity
+
+Novelty
+
+Impact
+
+Forecast Confidence
+
+These combine into a 0–100 score.
+
+ADR Ranges:
+
+0–39: Invisible
+
+40–69: Partially visible
+
+70–89: Strong visibility
+
+90–100: High Authority / Dominant
+
+============================================================
+
+6. VER v4 — Evidence Confidence Model
+
+VER evaluates the reliability of proof:
+
+citations
+
+listings
+
+reviews
+
+photos
+
+content footprint
+
+profiles
+
+schema
+
+consistency
 
 VER ranges:
-- **0.00–0.39:** Weak evidence  
-- **0.40–0.69:** Moderate evidence  
-- **0.70–1.00:** Strong evidence  
 
-VER is not a “review score.”  
-It is an evidence confidence multiplier.
+0.00–0.39: Weak
 
-------------------------------------------------------------
-## 5. Stages (Workflow Overview)
+0.40–0.69: Moderate
 
-### **Stage 0 — Field Scan**
-Purpose: Determine if the business appears *at all* in AI-driven answers.  
-Outputs:
-- ADR estimate
-- Competitor list
-- DOA (Stage 0)
+0.70–1.00: Strong
 
-### **Stage 1 — Deep Visibility Mapping**
-Purpose: Identify limiting factors and signal weaknesses.  
-Outputs:
-- Expanded DOA
-- VER calculation
-- Fix-Lever recommendations
+============================================================
 
-### **Stage 2 — Fix-Lever Execution**
-Purpose: Implement changes that directly impact ADR and VER.  
+7. Entity Identity & Dominant Noun Pattern
+
+AI determines “what you are” using noun patterns found across:
+
+reviews
+
+listings
+
+schema
+
+photos
+
+website copy
+
+GBP Products
+
+citations
+
+These nouns override the category a business chooses for itself.
+
+Example:
+
+A company claims “Electrician,”
+… but 60% of reviews mention “generator installation”
+… and product listings include “Standby generators”
+
+AI rewrites the category as:
+
+Standby Generator Specialist
+
+Specialists rank higher than generalists.
+
+============================================================
+
+8. Velocity, Recency, and Decay
+
+AI rewards fresh, fast-moving signals:
+
+Signals within 18 hours get the highest boost.
+
+Signals 18–72 hours still help, but less.
+
+Signals older than 72 hours fade quickly.
+
+Signals older than 30 days are stale.
+
+Bursts beat drips.
+Freshness beats history.
+
+Velocity is a multiplier in ADR v4.
+
+============================================================
+
+9. Contradiction Penalties
+
+AI punishes contradictions because contradictions create risk.
+
 Examples:
-- Entity clarity hardening
-- Review footprint expansion
-- Topic cluster coverage
-- Local proof density
-- Structured data improvements
 
-### **Stage 3 — Authority Expansion**
-Purpose: Expand the brand’s total surface area for long-term dominance.  
-Examples:
-- Multi-modal content
-- Strategic citations
-- Geographic/entity expansion
+Reviews mention “emergency service” but the site does not.
 
-------------------------------------------------------------
-## 6. The Fix-Levers (10)
+GBP lists “Electrician” but website says “HVAC.”
 
-These levers represent the standardized interventions used across industries:
+One listing shows a different address.
 
-1. **Entity Clarity**
-2. **Category Alignment**
-3. **Review Footprint & Distribution**
-4. **Local Proof Density**
-5. **Profile Unification**
-6. **Topic Cluster Coverage**
-7. **Regional Relevance Signals**
-8. **Structured Data & Schema Signals**
-9. **Content Authority & Depth**
-10. **Platform Presence Consistency**
+Schema lists services the site never mentions.
 
-Implementations may include additional steps but must map to these ten to remain compliant.
+One contradiction can remove a business from recommendations.
 
-------------------------------------------------------------
-## 7. DOA Schema (DiscoverabilityOps Artifact)
+ADR v4 includes:
 
-A DOA must include:
+a Contradiction Map
 
-- `version` — spec version used  
-- `entity` — name, category, region  
-- `metrics` — ADR, VER  
-- `signals` — profiles, citation examples, content sources  
-- `fix_levers` — list of recommended levers  
-- `scan_context` — stage, date, query set used  
-- `competitors` (optional) — list with ADR estimates  
+a Slashing Penalty applied before the final score
 
-Example DOA is available in `/examples/example-artifact.json`.
+============================================================
 
-------------------------------------------------------------
-## 8. Competitive Context
+10. Category Resolution & Rewrite Logic
 
-AI visibility occurs in a competitive landscape.  
-This section defines:
+AI evaluates:
 
-- how competitors are selected  
-- how comparative ADR scoring works  
-- how displacement pressure is interpreted  
-- how “dominant entities” influence recommendations  
+What does this business actually do?
 
-Implementations must:
-- Assess competitors in the same category + region  
-- Document ADR spread  
-- Represent competitor data in the DOA when possible  
+What is it known for?
 
-------------------------------------------------------------
-## 9. Implementation Guidance (Non-Normative)
+What is the safest category match?
 
-This section provides practical but optional guidance for:
+Category rewrites are driven by:
 
-- Agencies performing audits  
-- Product teams integrating ADR/VER scoring  
-- SMB operators using manual processes  
-- Cross-model evaluation  
+dominant nouns
 
-Guidance may include:
-- Example workflows  
-- Recommended query sets  
-- Signal-building strategies  
-- Reporting best practices  
+review themes
 
-------------------------------------------------------------
-## 10. Versioning
+GBP Products
 
-DiscoverabilityOps uses semantic versioning:
+content clusters
 
-- **MAJOR** — conceptual / structural changes  
-- **MINOR** — new examples, clarifications  
-- **PATCH** — editorial fixes  
+citation patterns
 
-Current version: **v1.2**
+If unclear → AI lowers authority.
+If consistent → AI may rewrite the business upward into a specialist identity.
 
-------------------------------------------------------------
-## 11. References
+============================================================
 
-Normative:
-- None at this time.
+11. UCA v1.0 — Unified Cognitive Artifact
+{
+  "version": "1.0",
+  "entity": {
+    "name": "",
+    "category": "",
+    "region": "",
+    "noun_pattern": [],
+    "identity_notes": ""
+  },
+  "metrics": {
+    "adr_v4": 0,
+    "ver_v4": 0.0,
+    "velocity_multiplier": 1.0,
+    "contradiction_penalty": 0.0
+  },
+  "signals": {
+    "profiles": [],
+    "citations": [],
+    "content_sources": [],
+    "reviews": {
+      "count": 0,
+      "distribution": "",
+      "themes": []
+    }
+  },
+  "contradictions": [],
+  "category_clusters": [],
+  "competitors": [],
+  "recommendations": {
+    "fix_levers": [],
+    "priority_actions": []
+  },
+  "scan_context": {
+    "stage": "0 | 1 | 2 | 3",
+    "date": "",
+    "query_set": []
+  }
+}
 
-Non-Normative:
-- Example artifacts  
-- Appendices  
-- External AEO research papers  
+
+============================================================
+
+12. Evaluation Workflow
+Stage 0 — Field Scan
+
+Checks if the business appears in AI at all.
+
+Stage 1 — Deep Mapping
+
+Identifies contradictions, weak signals, and category drift.
+
+Stage 2 — Fix-Lever Execution
+
+Applies the 10 Levers to improve clarity, signals, and authority.
+
+Stage 3 — Authority Expansion
+
+Long-term footprint expansion.
+
+============================================================
+
+13. Fix-Levers (Updated)
+
+Entity Identity Hardening
+
+Category Tightening
+
+Review Footprint Strengthening
+
+Local Proof Density
+
+Profile Unification
+
+Topic Cluster Expansion
+
+Regional Relevance
+
+Structured Data Alignment
+
+Content Depth & Authority
+
+Platform Presence Consistency
+
+============================================================
+
+14. Competitive Context
+
+AI visibility is competitive.
+
+A business is evaluated relative to:
+
+peers in same category
+
+peers in same region
+
+dominant national brands
+
+directory proxies (Angi, Yelp, Thumbtack, etc.)
+
+Competitive displacement affects ADR.
+
+============================================================
+
+15. Implementation Guidance (Non-Normative)
+
+Recommended practices:
+
+realistic query sets
+
+validate citations
+
+use UCA as the audit output
+
+cluster updates within short windows
+
+resolve contradictions first
+
+align website → reviews → schema
+
+adopt routine monitoring
+
+============================================================
+
+16. Versioning
+
+Major = structural change
+Minor = new examples
+Patch = editorial fixes
+
+Current version: v4.0.0
+
+============================================================
+
+17. Migration Notes (v1.2 → v4)
+
+ADR unified into 5-force model
+
+VER updated
+
+DOA replaced by UCA
+
+Contradiction penalties expanded
+
+Category rewrite rules formalized
+
+Noun pattern model added
+
+Velocity multipliers added
+
+Fix-Levers updated
+
+Workflow unchanged
+
+============================================================
+
+END OF STANDARD
